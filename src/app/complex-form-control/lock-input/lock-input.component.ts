@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -8,7 +8,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: LockInputComponent,
+      useExisting: forwardRef(() => LockInputComponent),
       multi: true,
     },
   ],
@@ -17,7 +17,7 @@ export class LockInputComponent implements ControlValueAccessor {
   value = false;
 
   disabled = false;
-  onTouched: () => void;
+  onTouched: () => void = () => {};
   onChange: (value: boolean) => void = () => {};
 
   writeValue(obj: boolean): void {

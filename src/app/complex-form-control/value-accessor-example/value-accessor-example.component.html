@@ -7,8 +7,8 @@
       placeholder="Add item"
     />
   </mat-form-field>
-  <button style="margin-top: 1rem;" mat-stroked-button (click)="onSubmit()">
+  <app-lock-input formControlName="isLocked"></app-lock-input>
+  <button [disabled]="!form.touched" style="margin-top: 1rem;" mat-stroked-button (click)="onSubmit()">
     Add item
   </button>
 </form>
-<app-lock-input></app-lock-input>

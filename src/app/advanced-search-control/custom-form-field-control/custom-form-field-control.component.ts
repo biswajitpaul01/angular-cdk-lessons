@@ -124,7 +124,7 @@ export class CustomFormFieldControlComponent extends _SearchInputMixiBase
   @HostBinding('attr.aria-describedby') describedBy = '';
 
   onChange: (value: FormFieldValue) => void;
-  onToutch: () => void;
+  onTouch: () => void;
 
   form: FormGroup;
 
@@ -153,7 +153,7 @@ export class CustomFormFieldControlComponent extends _SearchInputMixiBase
     this.onChange = fn;
   }
   registerOnTouched(fn: any): void {
-    this.onToutch = fn;
+    this.onTouch = fn;
   }
   setDisabledState(isDisabled: boolean): void {
     this.disabled = isDisabled;
@@ -177,7 +177,7 @@ export class CustomFormFieldControlComponent extends _SearchInputMixiBase
       .monitor(this.input)
       .pipe(take(1))
       .subscribe(() => {
-        this.onToutch();
+        this.onTouch();
       });
     this.form.valueChanges.subscribe((value) => this.onChange(value));
   }

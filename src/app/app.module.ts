@@ -11,6 +11,7 @@ import { OverlayExampleModule } from './overlay-example/overlay-example.module';
 import { ComplexFormControlModule } from './complex-form-control/complex-form-control.module';
 import { PatternsExampleModule } from './patterns-example/patterns-example.module';
 import { AdvancedSearchControlModule } from './advanced-search-control/advanced-search-control.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,6 +25,7 @@ import { AdvancedSearchControlModule } from './advanced-search-control/advanced-
     ComplexFormControlModule,
     PatternsExampleModule,
     AdvancedSearchControlModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -8,7 +8,7 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class SearchFormFieldContainerComponent implements OnInit {
   formControl = new FormControl(
-    { value: { scope: '', query: '' }, disabled: true },
+    { value: { scope: '', query: '' }, disabled: false },
     AdvancedSearchValidetor
   );
 
